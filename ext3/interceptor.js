@@ -9,7 +9,7 @@ XMLHttpRequest.prototype.open = function(method, url) {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ response: this.responseText })
-            }).catch(error => console.error('Error forwarding response:', error));
+            }).catch(error => console.log('Could not forward response to localhost'));
         });
     }
     return originalOpen.apply(this, arguments);
